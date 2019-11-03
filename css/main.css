@@ -1,0 +1,21 @@
+html { 
+    background: url('../images/sunset_boat.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+body {
+    color: #fff;
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
