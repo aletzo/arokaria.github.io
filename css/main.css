@@ -1,6 +1,7 @@
-html { 
-    background: url('../images/sunset_boat.jpg') no-repeat center center fixed; 
-    background-size: cover;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -10,6 +11,60 @@ body {
 
 h1 {
     font-weight: normal;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+
+.stroke {
+    text-shadow:
+   -1px -1px 0 #555,  
+    1px -1px 0 #555,
+    -1px 1px 0 #555,
+     1px 1px 0 #555;
+}
+
+h2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 5em;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+}
+
+#welcome {
+    background: url('../images/sunset_boat.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#accommodation {
+    background: url('../images/boat.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#activities {
+    background: url('../images/beach.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#places {
+    background: url('../images/pink_sky.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#contact {
+    bottom: 1em;
+    font-size: 2em;
+    left: 1em;
+    position: fixed;
 }
 
 a {
