@@ -14,6 +14,7 @@ h1 {
     position: fixed;
     top: 1em;
     left: 1em;
+    z-index: 100;
 }
 
 .stroke {
@@ -24,40 +25,134 @@ h1 {
      1px 1px 0 #555;
 }
 
-h2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 5em;
-    justify-content: center;
-    margin: 0;
-    min-height: 100vh;
-    text-align: center;
+#app {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }
 
 .page {
     height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 2000px;
+    transition: top .5s ease 0s;
+    width: 100%;
+}
+.page:nth-child(1) {
+    top: 0;
+}
+
+.page h2 {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    z-index: 200;
+}
+
+.page .photos {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
     width: 100%;
 }
 
+.page .photos .photo {
+    height: 100%;
+    left: 2000px;
+    position: absolute;
+    top: 0;
+    transition: left .5s ease 0s;
+    width: 100%;
+}
+.page .photos .photo:nth-child(1) {
+    left: 0;
+}
+
+.page:nth-child(1) .photos .photo:nth-child(1) {
+    background-color: #7BBC43;
+}
+.page:nth-child(1) .photos .photo:nth-child(2) {
+    background-color: #95CA68;
+}
+.page:nth-child(1) .photos .photo:nth-child(3) {
+    background-color: #B0D88D;
+}
+.page:nth-child(1) .photos .photo:nth-child(4) {
+    background-color: #CAE6B2;
+}
+.page:nth-child(2) .photos .photo:nth-child(1) {
+    background-color: #183D46;
+}
+.page:nth-child(2) .photos .photo:nth-child(2) {
+    background-color: #255F6C;
+}
+.page:nth-child(2) .photos .photo:nth-child(3) {
+    background-color: #308193;
+}
+.page:nth-child(2) .photos .photo:nth-child(4) {
+    background-color: #3CA4BB;
+}
+.page:nth-child(3) .photos .photo:nth-child(1) {
+    background-color: #AF3FB5;
+}
+.page:nth-child(3) .photos .photo:nth-child(2) {
+    background-color: #C35FC9;
+}
+.page:nth-child(3) .photos .photo:nth-child(3) {
+    background-color: #D284D7;
+}
+.page:nth-child(3) .photos .photo:nth-child(4) {
+    background-color: #E1AAE4;
+}
+.page:nth-child(4) .photos .photo:nth-child(1) {
+    background-color: #5B3DAB;
+}
+.page:nth-child(4) .photos .photo:nth-child(2) {
+    background-color: #7456C4;
+}
+.page:nth-child(4) .photos .photo:nth-child(3) {
+    background-color: #937BD2;
+}
+.page:nth-child(4) .photos .photo:nth-child(4) {
+    background-color: #B2A1E0;
+}
+.page:nth-child(5) .photos .photo:nth-child(1) {
+    background-color: #0D2613;
+}
+.page:nth-child(5) .photos .photo:nth-child(2) {
+    background-color: #1A4C26;
+}
+.page:nth-child(5) .photos .photo:nth-child(3) {
+    background-color: #267339;
+}
+.page:nth-child(5) .photos .photo:nth-child(4) {
+    background-color: #319B4B;
+}
+
+
+
+
+
+
 #welcome {
+    /*
     background: url('../images/sunset_boat.jpg') no-repeat center center fixed; 
     background-size: cover;
+    */
 }
 
 #accommodation {
-    background: url('../images/boat.jpg') no-repeat center center fixed; 
-    background-size: cover;
 }
 
 #activities {
-    background: url('../images/beach.jpg') no-repeat center center fixed; 
-    background-size: cover;
 }
 
 #places {
-    background: url('../images/pink_sky.jpg') no-repeat center center fixed; 
-    background-size: cover;
 }
 
 #contact {
@@ -65,6 +160,7 @@ h2 {
     font-size: 2em;
     left: 1em;
     position: fixed;
+    z-index: 100;
 }
 
 a {
