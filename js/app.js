@@ -4,6 +4,8 @@ let activePhoto = 0
 const screenHeight = 2000
 const screenWidth = 2000
 
+let isMoveInProgress = false
+
 document.addEventListener('keydown', ev => {
     const arrowKeys = [
         'ArrowDown',
@@ -15,8 +17,17 @@ document.addEventListener('keydown', ev => {
     if (!arrowKeys.includes(ev.key)) {
         return true
     }
+
+    if (isMoveInProgress) {
+        ev.preventDefault()
+        return false
+    }
+
+    isMoveInProgress = true
+
+    setTimeout(() => { isMoveInProgress = false }, 500 )
     
-    event.preventDefault()
+    ev.preventDefault()
 
     switch (ev.key) {
         case 'ArrowDown':
@@ -70,3 +81,29 @@ const movePhoto = (photo, page) => {
     })
 }
 
+const scrollHandler = ev => {
+    const deltaThreshold = 100
+
+    if (ev.wheelDeltaY >= deltaThreshold) {
+        document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowUp'}))
+
+        return
+    }
+
+    if (ev.wheelDeltaY <= (-1 * deltaThreshold)) {
+        document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowDown'}))
+        return
+    }
+
+
+    if (ev.wheelDeltaX >= deltaThreshold) {
+       document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowLeft'}))
+    }
+
+    if (ev.wheelDeltaX <= (-1 * deltaThreshold)) {
+       document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}))
+    }
+}
+
+window.addEventListener('mousewheel', scrollHandler)
+window.addEventListener('touchmove', scrollHandler)
