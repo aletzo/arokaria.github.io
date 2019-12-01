@@ -69,6 +69,18 @@ const movePage = (page) => {
     })
 
     activePhoto = 0
+
+    if (activePage === 0) {
+        document.querySelector('.icono-caretUp').classList.add('hidden')
+    } else {
+        document.querySelector('.icono-caretUp').classList.remove('hidden')
+    }
+
+    if (activePage === 4) {
+        document.querySelector('.icono-caretDown').classList.add('hidden')
+    } else {
+        document.querySelector('.icono-caretDown').classList.remove('hidden')
+    }
 }
 
 const movePhoto = (photo, page) => {
@@ -79,6 +91,18 @@ const movePhoto = (photo, page) => {
             ? 0
             : screenWidth + 'px'
     })
+
+    if (activePhoto === 0) {
+        document.querySelector('.icono-caretLeft').classList.add('hidden')
+    } else {
+        document.querySelector('.icono-caretLeft').classList.remove('hidden')
+    }
+
+    if (activePhoto === 3) {
+        document.querySelector('.icono-caretRight').classList.add('hidden')
+    } else {
+        document.querySelector('.icono-caretRight').classList.remove('hidden')
+    }
 }
 
 const scrollHandler = ev => {
@@ -106,4 +130,32 @@ const scrollHandler = ev => {
 }
 
 window.addEventListener('mousewheel', scrollHandler)
-window.addEventListener('touchmove', scrollHandler)
+
+window.addEventListener('click', ev => {
+
+    if (ev.target.className.includes('Down')) {
+        if (activePage < 4) {
+            movePage(++activePage)
+        }
+    }
+
+    if (ev.target.className.includes('Left')) {
+        if (activePhoto > 0) {
+            movePhoto(--activePhoto, activePage)
+        }
+    }
+
+    if (ev.target.className.includes('Right')) {
+        if (activePhoto < 3) {
+            movePhoto(++activePhoto, activePage)
+        }
+    }
+
+    if (ev.target.className.includes('Up')) {
+        if (activePage > 0) {
+            movePage(--activePage)
+        }
+    }
+
+})
+

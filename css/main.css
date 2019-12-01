@@ -17,6 +17,32 @@ h1 {
     z-index: 100;
 }
 
+.icon {
+    position: fixed;
+    z-index: 1000;
+}
+.icon:hover {
+    cursor: pointer;
+}
+
+.icon.icono-caretDown {
+    bottom: 2em;
+    left: 50%;
+}
+.icon.icono-caretLeft {
+    left: 2em;
+    top: 50%;
+}
+.icon.icono-caretRight {
+    right: 2em;
+    top: 50%;
+}
+.icon.icono-caretUp {
+    left: 50%;
+    top: 2em;
+}
+
+
 .stroke {
     text-shadow:
    -1px -1px 0 #555,  
@@ -169,4 +195,9 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+
+.hidden {
+    display: none;
 }
