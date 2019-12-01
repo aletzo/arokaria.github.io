@@ -1,6 +1,7 @@
 html, body {
-    height: 100%;
+    height: calc(100%);
     margin: 0;
+    min-height: 100vh;
     padding: 0;
 }
 
@@ -26,20 +27,28 @@ h1 {
 }
 
 .icon.bottom {
-    bottom: 2em;
+    bottom: 3em;
     left: 50%;
 }
 .icon.left {
-    left: 2em;
+    left: 3em;
     top: 50%;
 }
 .icon.right {
-    right: 2em;
+    right: 3em;
     top: 50%;
 }
 .icon.top {
     left: 50%;
-    top: 2em;
+    top: 3em;
+}
+
+#languages {
+    font-size: 1.5em;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 100;
 }
 
 
@@ -52,7 +61,8 @@ h1 {
 }
 
 #app {
-    height: 100%;
+    height: calc(100%);
+    min-height: 100vh;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -60,8 +70,9 @@ h1 {
 }
 
 .page {
-    height: 100%;
+    height: calc(100%);
     left: 0;
+    min-height: 100vh;
     overflow: hidden;
     position: absolute;
     top: 2000px;
@@ -81,15 +92,17 @@ h1 {
 }
 
 .page .photos {
-    height: 100%;
+    height: calc(100%);
+    min-height: 100vh;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
 
 .page .photos .photo {
-    height: 100%;
+    height: calc(100%);
     left: 2000px;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     transition: left .5s ease 0s;
