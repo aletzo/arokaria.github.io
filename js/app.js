@@ -171,3 +171,53 @@ window.addEventListener('click', ev => {
 
 })
 
+
+let x = 0
+let previousX = 0
+let diffX = 0
+
+let y = 0
+let previousY = 0
+let diffY = 0
+
+
+
+const threshold = 5
+
+const moveHandler = ev => {
+    let touch
+
+    if (ev.touches) {
+        touch = ev.touches[0]
+    }
+
+    x = touch.pageX
+    y = touch.pageY
+
+    diffX = Math.abs(x - previousX)
+    diffY = Math.abs(y - previousY)
+    
+    if (diffX < diffY && diffY > threshold) {
+        if (y > previousY) {
+            document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowDown'}))
+        } else {
+            document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowUp'}))
+        }
+
+        previousY = y
+    }
+
+    document.querySelector('h1').innerHTML = ev.touches[0].pageX
+
+    if (diffX > diffY && diffX > threshold) {
+        if (x > previousX) {
+            document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}))
+        } else {
+            document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowLeft'}))
+        }
+
+        previousX = x
+    }
+}
+
+window.addEventListener('touchmove', moveHandler)
