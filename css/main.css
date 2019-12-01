@@ -25,19 +25,19 @@ h1 {
     cursor: pointer;
 }
 
-.icon.icono-caretDown {
+.icon.bottom {
     bottom: 2em;
     left: 50%;
 }
-.icon.icono-caretLeft {
+.icon.left {
     left: 2em;
     top: 50%;
 }
-.icon.icono-caretRight {
+.icon.right {
     right: 2em;
     top: 50%;
 }
-.icon.icono-caretUp {
+.icon.top {
     left: 50%;
     top: 2em;
 }

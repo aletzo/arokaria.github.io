@@ -71,15 +71,27 @@ const movePage = (page) => {
     activePhoto = 0
 
     if (activePage === 0) {
-        document.querySelector('.icono-caretUp').classList.add('hidden')
+        document.querySelector('.icon.top').classList.add('hidden')
     } else {
-        document.querySelector('.icono-caretUp').classList.remove('hidden')
+        document.querySelector('.icon.top').classList.remove('hidden')
     }
 
     if (activePage === 4) {
-        document.querySelector('.icono-caretDown').classList.add('hidden')
+        document.querySelector('.icon.bottom').classList.add('hidden')
     } else {
-        document.querySelector('.icono-caretDown').classList.remove('hidden')
+        document.querySelector('.icon.bottom').classList.remove('hidden')
+    }
+
+    if (activePhoto === 0) {
+        document.querySelector('.icon.left').classList.add('hidden')
+    } else {
+        document.querySelector('.icon.left').classList.remove('hidden')
+    }
+
+    if (activePhoto === 3) {
+        document.querySelector('.icon.right').classList.add('hidden')
+    } else {
+        document.querySelector('.icon.right').classList.remove('hidden')
     }
 }
 
@@ -93,15 +105,15 @@ const movePhoto = (photo, page) => {
     })
 
     if (activePhoto === 0) {
-        document.querySelector('.icono-caretLeft').classList.add('hidden')
+        document.querySelector('.icon.left').classList.add('hidden')
     } else {
-        document.querySelector('.icono-caretLeft').classList.remove('hidden')
+        document.querySelector('.icon.left').classList.remove('hidden')
     }
 
     if (activePhoto === 3) {
-        document.querySelector('.icono-caretRight').classList.add('hidden')
+        document.querySelector('.icon.right').classList.add('hidden')
     } else {
-        document.querySelector('.icono-caretRight').classList.remove('hidden')
+        document.querySelector('.icon.right').classList.remove('hidden')
     }
 }
 
@@ -133,25 +145,25 @@ window.addEventListener('mousewheel', scrollHandler)
 
 window.addEventListener('click', ev => {
 
-    if (ev.target.className.includes('Down')) {
+    if (ev.target.className.includes('bottom')) {
         if (activePage < 4) {
             movePage(++activePage)
         }
     }
 
-    if (ev.target.className.includes('Left')) {
+    if (ev.target.className.includes('left')) {
         if (activePhoto > 0) {
             movePhoto(--activePhoto, activePage)
         }
     }
 
-    if (ev.target.className.includes('Right')) {
+    if (ev.target.className.includes('right')) {
         if (activePhoto < 3) {
             movePhoto(++activePhoto, activePage)
         }
     }
 
-    if (ev.target.className.includes('Up')) {
+    if (ev.target.className.includes('top')) {
         if (activePage > 0) {
             movePage(--activePage)
         }
