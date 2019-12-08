@@ -30,7 +30,7 @@ document.addEventListener('keydown', ev => {
 
     isMoveInProgress = true
 
-    setTimeout(() => { isMoveInProgress = false }, moveDuration )
+    setTimeout(() => { isMoveInProgress = false }, moveDuration)
     
     ev.preventDefault()
 
