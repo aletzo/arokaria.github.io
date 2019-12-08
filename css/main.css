@@ -28,19 +28,48 @@ h1 {
 
 .icon.bottom {
     bottom: 3em;
-    left: 50%;
+    left: calc(50% - 1.5em);
 }
 .icon.left {
     left: 3em;
-    top: 50%;
+    top: calc(50% - 1.5em);
 }
 .icon.right {
     right: 3em;
-    top: 50%;
+    top: calc(50% - 1.5em);
 }
 .icon.top {
-    left: 50%;
+    left: calc(50% - 1.5em);
     top: 3em;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.4em 0.4em 0 0;
+	content: '';
+	display: inline-block;
+	height: 3em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 3em;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
 }
 
 #languages {
@@ -76,13 +105,17 @@ h1 {
     overflow: hidden;
     position: absolute;
     top: 2000px;
-    transition: top .5s ease 0s;
+    transition: all .5s ease 0s;
     width: 100%;
+    z-index: 11;
+}
+.page.activePage {
+    top: 0;
+    z-index: 12;
 }
 .page:nth-child(1) {
     top: 0;
 }
-
 .page h2 {
     position: absolute;
     text-align: center;
@@ -105,9 +138,15 @@ h1 {
     min-height: 100vh;
     position: absolute;
     top: 0;
-    transition: left .5s ease 0s;
+    transition: all .5s ease 0s;
     width: 100%;
+    z-index: 20;
 }
+.page .photos .photo.activePhoto {
+    left: 0;
+    z-index: 21;
+}
+
 .page .photos .photo:nth-child(1) {
     left: 0;
 }

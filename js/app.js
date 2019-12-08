@@ -1,10 +1,15 @@
-let activePage  = 0
-let activePhoto = 0
+let activePage       = 0
+let activePageZindex = 12
+
+let activePhoto       = 0
+let activePhotoZindex = 0
 
 const screenHeight = 2000
 const screenWidth = 2000
 
 let isMoveInProgress = false
+
+const moveDuration = 500
 
 document.addEventListener('keydown', ev => {
     const arrowKeys = [
@@ -25,7 +30,7 @@ document.addEventListener('keydown', ev => {
 
     isMoveInProgress = true
 
-    setTimeout(() => { isMoveInProgress = false }, 500 )
+    setTimeout(() => { isMoveInProgress = false }, moveDuration )
     
     ev.preventDefault()
 
@@ -57,16 +62,23 @@ document.addEventListener('keydown', ev => {
     }
 })
 
-const movePage = (page) => {
+const movePage = page => {
     const pages = [...document.querySelectorAll('.page')]
 
-    pages.forEach((p, i) => {
-        p.style.top = (i === page)
-            ? 0
-            : screenHeight + 'px'
+    activePageZindex++
 
-        movePhoto(0, i)
-    })
+    pages[page].style.top    = 0
+    pages[page].style.zIndex = activePageZindex
+
+    setTimeout(() => {
+        pages.forEach((p, i) => {
+            if (i !== page) {
+                p.style.top = screenHeight + 'px'
+
+                movePhoto(0, i)
+            }
+        })
+    }, moveDuration)
 
     activePhoto = 0
 
@@ -98,11 +110,18 @@ const movePage = (page) => {
 const movePhoto = (photo, page) => {
     const photos = [...document.querySelectorAll(`.page:nth-child(${page + 1}) .photo`)]
 
-    photos.forEach((p, i) => {
-        p.style.left = (i === photo)
-            ? 0
-            : screenWidth + 'px'
-    })
+    activePhotoZindex++
+
+    photos[photo].style.left   = 0
+    photos[photo].style.zIndex = activePhotoZindex
+
+    setTimeout(() => {
+        photos.forEach((p, i) => {
+            if (i !== photo) {
+                p.style.left = screenHeight + 'px'
+            }
+        })
+    }, moveDuration)
 
     if (activePhoto === 0) {
         document.querySelector('.icon.left').classList.add('hidden')
@@ -174,13 +193,9 @@ window.addEventListener('click', ev => {
 
 let x = 0
 let previousX = 0
-let diffX = 0
 
 let y = 0
 let previousY = 0
-let diffY = 0
-
-
 
 const threshold = 5
 
@@ -194,8 +209,8 @@ const moveHandler = ev => {
     x = touch.pageX
     y = touch.pageY
 
-    diffX = Math.abs(x - previousX)
-    diffY = Math.abs(y - previousY)
+    const diffX = Math.abs(x - previousX)
+    const diffY = Math.abs(y - previousY)
     
     if (diffX < diffY && diffY > threshold) {
         if (y > previousY) {
@@ -206,8 +221,6 @@ const moveHandler = ev => {
 
         previousY = y
     }
-
-    document.querySelector('h1').innerHTML = ev.touches[0].pageX
 
     if (diffX > diffY && diffX > threshold) {
         if (x > previousX) {
