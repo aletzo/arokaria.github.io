@@ -19,7 +19,9 @@ h1 {
 }
 
 .icon {
+    opacity: 1;
     position: fixed;
+    transition: all .5s ease 0s;
     z-index: 1000;
 }
 .icon:hover {
@@ -251,5 +253,5 @@ a:hover {
 
 
 .hidden {
-    display: none;
+    opacity: 0;
 }
