@@ -4,6 +4,8 @@ let activePageZindex = 12
 let activePhoto       = 0
 let activePhotoZindex = 0
 
+let currentPagePhotosCount = 10
+
 const screenHeight = 2000
 const screenWidth = 2000
 
@@ -48,7 +50,7 @@ document.addEventListener('keydown', ev => {
             break
 
         case 'ArrowRight':
-            if (activePhoto < 3) {
+            if (activePhoto < currentPagePhotosCount - 1) {
                 movePhoto(++activePhoto, activePage)
             }
             break;
@@ -82,6 +84,10 @@ const movePage = page => {
 
     activePhoto = 0
 
+    const photosDiv = pages[page].children[1]
+
+    currentPagePhotosCount = photosDiv.children.length
+
     if (activePage === 0) {
         document.querySelector('.icon.top').classList.add('hidden')
     } else {
@@ -100,7 +106,7 @@ const movePage = page => {
         document.querySelector('.icon.left').classList.remove('hidden')
     }
 
-    if (activePhoto === 3) {
+    if (activePhoto === currentPagePhotosCount - 1) {
         document.querySelector('.icon.right').classList.add('hidden')
     } else {
         document.querySelector('.icon.right').classList.remove('hidden')
@@ -123,13 +129,13 @@ const movePhoto = (photo, page) => {
         })
     }, moveDuration)
 
-    if (activePhoto === 0) {
+    if (photo === 0) {
         document.querySelector('.icon.left').classList.add('hidden')
     } else {
         document.querySelector('.icon.left').classList.remove('hidden')
     }
 
-    if (activePhoto === 3) {
+    if (photo === currentPagePhotosCount - 1) {
         document.querySelector('.icon.right').classList.add('hidden')
     } else {
         document.querySelector('.icon.right').classList.remove('hidden')
@@ -177,7 +183,7 @@ window.addEventListener('click', ev => {
     }
 
     if (ev.target.className.includes('right')) {
-        if (activePhoto < 3) {
+        if (activePhoto < currentPagePhotosCount - 1) {
             movePhoto(++activePhoto, activePage)
         }
     }
