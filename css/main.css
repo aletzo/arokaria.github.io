@@ -135,6 +135,8 @@ h1 {
 }
 
 .page .photos .photo {
+    background: url('../images/01_welcome_l.jpg') no-repeat center center fixed; 
+    background-size: cover;
     height: calc(100%);
     left: 2000px;
     min-height: 100vh;
@@ -153,69 +155,343 @@ h1 {
     left: 0;
 }
 
+/***********/
+/*         */
+/* welcome */
+/*         */
+/***********/
 .page:nth-child(1) .photos .photo:nth-child(1) {
-    background-color: #7BBC43;
+    background-image: url('../images/welcome/01_welcome_l.jpg');
 }
 .page:nth-child(1) .photos .photo:nth-child(2) {
-    background-color: #95CA68;
+    background-image: url('../images/welcome/02_welcome_l.jpg');
 }
 .page:nth-child(1) .photos .photo:nth-child(3) {
+    background-image: url('../images/welcome/03_welcome_l.jpg');
     background-color: #B0D88D;
 }
 .page:nth-child(1) .photos .photo:nth-child(4) {
-    background-color: #CAE6B2;
+    background-image: url('../images/welcome/04_welcome_l.jpg');
 }
+.page:nth-child(1) .photos .photo:nth-child(5) {
+    background-image: url('../images/welcome/05_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(6) {
+    background-image: url('../images/welcome/06_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(7) {
+    background-image: url('../images/welcome/07_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(8) {
+    background-image: url('../images/welcome/08_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(9) {
+    background-image: url('../images/welcome/09_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(10) {
+    background-image: url('../images/welcome/10_welcome_l.jpg');
+}
+
+/************/
+/*          */
+/* arokaria */
+/*          */
+/************/
 .page:nth-child(2) .photos .photo:nth-child(1) {
-    background-color: #183D46;
+    background-image: url('../images/arokaria/01_arokaria_l.jpg');
 }
 .page:nth-child(2) .photos .photo:nth-child(2) {
-    background-color: #255F6C;
+    background-image: url('../images/arokaria/02_arokaria_l.jpg');
 }
 .page:nth-child(2) .photos .photo:nth-child(3) {
-    background-color: #308193;
+    background-image: url('../images/arokaria/03_arokaria_l.jpg');
 }
 .page:nth-child(2) .photos .photo:nth-child(4) {
-    background-color: #3CA4BB;
+    background-image: url('../images/arokaria/04_arokaria_l.jpg');
 }
+.page:nth-child(2) .photos .photo:nth-child(5) {
+    background-image: url('../images/arokaria/05_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(6) {
+    background-image: url('../images/arokaria/06_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(7) {
+    background-image: url('../images/arokaria/07_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(8) {
+    background-image: url('../images/arokaria/08_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(9) {
+    background-image: url('../images/arokaria/09_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(10) {
+    background-image: url('../images/arokaria/10_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(11) {
+    background-image: url('../images/arokaria/11_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(12) {
+    background-image: url('../images/arokaria/12_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(13) {
+    background-image: url('../images/arokaria/13_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(14) {
+    background-image: url('../images/arokaria/14_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(15) {
+    background-image: url('../images/arokaria/15_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(16) {
+    background-image: url('../images/arokaria/16_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(17) {
+    background-image: url('../images/arokaria/17_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(18) {
+    background-image: url('../images/arokaria/18_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(19) {
+    background-image: url('../images/arokaria/19_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(20) {
+    background-image: url('../images/arokaria/20_arokaria_l.jpg');
+}
+
+/**************/
+/*            */
+/* activities */
+/*            */
+/**************/
 .page:nth-child(3) .photos .photo:nth-child(1) {
-    background-color: #AF3FB5;
+    background-image: url('../images/activities/01_activities_l.jpg');
 }
 .page:nth-child(3) .photos .photo:nth-child(2) {
-    background-color: #C35FC9;
+    background-image: url('../images/activities/02_activities_l.jpg');
 }
 .page:nth-child(3) .photos .photo:nth-child(3) {
-    background-color: #D284D7;
+    background-image: url('../images/activities/03_activities_l.jpg');
 }
 .page:nth-child(3) .photos .photo:nth-child(4) {
-    background-color: #E1AAE4;
+    background-image: url('../images/activities/04_activities_l.jpg');
 }
+
+/**********/
+/*        */
+/* places */
+/*        */
+/**********/
 .page:nth-child(4) .photos .photo:nth-child(1) {
-    background-color: #5B3DAB;
+    background-image: url('../images/places/01_places_l.jpg');
 }
 .page:nth-child(4) .photos .photo:nth-child(2) {
-    background-color: #7456C4;
+    background-image: url('../images/places/02_places_l.jpg');
 }
 .page:nth-child(4) .photos .photo:nth-child(3) {
-    background-color: #937BD2;
+    background-image: url('../images/places/03_places_l.jpg');
 }
-.page:nth-child(4) .photos .photo:nth-child(4) {
-    background-color: #B2A1E0;
-}
+
+/************/
+/*          */
+/* weddings */
+/*          */
+/************/
 .page:nth-child(5) .photos .photo:nth-child(1) {
-    background-color: #0D2613;
+    background-image: url('../images/weddings/01_weddings_l.jpg');
 }
 .page:nth-child(5) .photos .photo:nth-child(2) {
-    background-color: #1A4C26;
+    background-image: url('../images/weddings/02_weddings_l.jpg');
 }
 .page:nth-child(5) .photos .photo:nth-child(3) {
-    background-color: #267339;
+    background-image: url('../images/weddings/03_weddings_l.jpg');
 }
 .page:nth-child(5) .photos .photo:nth-child(4) {
-    background-color: #319B4B;
+    background-image: url('../images/weddings/04_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(5) {
+    background-image: url('../images/weddings/05_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(6) {
+    background-image: url('../images/weddings/06_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(7) {
+    background-image: url('../images/weddings/07_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(8) {
+    background-image: url('../images/weddings/08_weddings_l.jpg');
 }
 
 
 
+@media (orientation: portrait) {
+
+    /***********/
+    /*         */
+    /* welcome */
+    /*         */
+    /***********/
+    .page:nth-child(1) .photos .photo:nth-child(1) {
+        background-image: url('../images/welcome/01_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(2) {
+        background-image: url('../images/welcome/02_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(3) {
+        background-image: url('../images/welcome/03_welcome_p.jpg');
+        background-color: #B0D88D;
+    }
+    .page:nth-child(1) .photos .photo:nth-child(4) {
+        background-image: url('../images/welcome/04_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(5) {
+        background-image: url('../images/welcome/05_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(6) {
+        background-image: url('../images/welcome/06_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(7) {
+        background-image: url('../images/welcome/07_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(8) {
+        background-image: url('../images/welcome/08_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(9) {
+        background-image: url('../images/welcome/09_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(10) {
+        background-image: url('../images/welcome/10_welcome_p.jpg');
+    }
+
+    /************/
+    /*          */
+    /* arokaria */
+    /*          */
+    /************/
+    .page:nth-child(2) .photos .photo:nth-child(1) {
+        background-image: url('../images/arokaria/01_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(2) {
+        background-image: url('../images/arokaria/02_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(3) {
+        background-image: url('../images/arokaria/03_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(4) {
+        background-image: url('../images/arokaria/04_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(5) {
+        background-image: url('../images/arokaria/05_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(6) {
+        background-image: url('../images/arokaria/06_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(7) {
+        background-image: url('../images/arokaria/07_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(8) {
+        background-image: url('../images/arokaria/08_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(9) {
+        background-image: url('../images/arokaria/09_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(10) {
+        background-image: url('../images/arokaria/10_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(11) {
+        background-image: url('../images/arokaria/11_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(12) {
+        background-image: url('../images/arokaria/12_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(13) {
+        background-image: url('../images/arokaria/13_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(14) {
+        background-image: url('../images/arokaria/14_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(15) {
+        background-image: url('../images/arokaria/15_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(16) {
+        background-image: url('../images/arokaria/16_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(17) {
+        background-image: url('../images/arokaria/17_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(18) {
+        background-image: url('../images/arokaria/18_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(19) {
+        background-image: url('../images/arokaria/19_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(20) {
+        background-image: url('../images/arokaria/20_arokaria_p.jpg');
+    }
+
+    /**************/
+    /*            */
+    /* activities */
+    /*            */
+    /**************/
+    .page:nth-child(3) .photos .photo:nth-child(1) {
+        background-image: url('../images/activities/01_activities_p.jpg');
+    }
+    .page:nth-child(3) .photos .photo:nth-child(2) {
+        background-image: url('../images/activities/02_activities_p.jpg');
+    }
+    .page:nth-child(3) .photos .photo:nth-child(3) {
+        background-image: url('../images/activities/03_activities_p.jpg');
+    }
+    .page:nth-child(3) .photos .photo:nth-child(4) {
+        background-image: url('../images/activities/04_activities_p.jpg');
+    }
+
+    /**********/
+    /*        */
+    /* places */
+    /*        */
+    /**********/
+    .page:nth-child(4) .photos .photo:nth-child(1) {
+        background-image: url('../images/places/01_places_p.jpg');
+    }
+    .page:nth-child(4) .photos .photo:nth-child(2) {
+        background-image: url('../images/places/02_places_p.jpg');
+    }
+    .page:nth-child(4) .photos .photo:nth-child(3) {
+        background-image: url('../images/places/03_places_p.jpg');
+    }
+
+    /************/
+    /*          */
+    /* weddings */
+    /*          */
+    /************/
+    .page:nth-child(5) .photos .photo:nth-child(1) {
+        background-image: url('../images/weddings/01_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(2) {
+        background-image: url('../images/weddings/02_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(3) {
+        background-image: url('../images/weddings/03_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(4) {
+        background-image: url('../images/weddings/04_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(5) {
+        background-image: url('../images/weddings/05_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(6) {
+        background-image: url('../images/weddings/06_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(7) {
+        background-image: url('../images/weddings/07_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(8) {
+        background-image: url('../images/weddings/08_weddings_p.jpg');
+    }
+
+}
 
 
 
