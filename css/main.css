@@ -1,6 +1,7 @@
 html, body {
-    height: 100%;
+    height: calc(100%);
     margin: 0;
+    min-height: 100vh;
     padding: 0;
 }
 
@@ -14,7 +15,73 @@ h1 {
     position: fixed;
     top: 1em;
     left: 1em;
+    z-index: 100;
 }
+
+.icon {
+    opacity: 1;
+    position: fixed;
+    transition: all .5s ease 0s;
+    z-index: 1000;
+}
+.icon:hover {
+    cursor: pointer;
+}
+
+.icon.bottom {
+    bottom: 3em;
+    left: calc(50% - 1.5em);
+}
+.icon.left {
+    left: 3em;
+    top: calc(50% - 1.5em);
+}
+.icon.right {
+    right: 3em;
+    top: calc(50% - 1.5em);
+}
+.icon.top {
+    left: calc(50% - 1.5em);
+    top: 3em;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.4em 0.4em 0 0;
+	content: '';
+	display: inline-block;
+	height: 3em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 3em;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+
+#languages {
+    font-size: 1.5em;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 100;
+}
+
 
 .stroke {
     text-shadow:
@@ -24,47 +91,432 @@ h1 {
      1px 1px 0 #555;
 }
 
-h2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 5em;
-    justify-content: center;
-    margin: 0;
+#app {
+    height: calc(100%);
     min-height: 100vh;
-    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }
 
 .page {
-    height: 100%;
+    height: calc(100%);
+    left: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 2000px;
+    transition: all .5s ease 0s;
+    width: 100%;
+    z-index: 11;
+}
+.page.activePage {
+    top: 0;
+    z-index: 12;
+}
+.page:nth-child(1) {
+    top: 0;
+}
+.page h2 {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    z-index: 200;
+}
+
+.page .photos {
+    height: calc(100%);
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
     width: 100%;
 }
 
+.page .photos .photo {
+    background: url('../images/01_welcome_l.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    height: calc(100%);
+    left: 2000px;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: all .5s ease 0s;
+    width: 100%;
+    z-index: 20;
+}
+.page .photos .photo.activePhoto {
+    left: 0;
+    z-index: 21;
+}
+
+.page .photos .photo:nth-child(1) {
+    left: 0;
+}
+
+/***********/
+/*         */
+/* welcome */
+/*         */
+/***********/
+.page:nth-child(1) .photos .photo:nth-child(1) {
+    background-image: url('../images/welcome/01_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(2) {
+    background-image: url('../images/welcome/02_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(3) {
+    background-image: url('../images/welcome/03_welcome_l.jpg');
+    background-color: #B0D88D;
+}
+.page:nth-child(1) .photos .photo:nth-child(4) {
+    background-image: url('../images/welcome/04_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(5) {
+    background-image: url('../images/welcome/05_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(6) {
+    background-image: url('../images/welcome/06_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(7) {
+    background-image: url('../images/welcome/07_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(8) {
+    background-image: url('../images/welcome/08_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(9) {
+    background-image: url('../images/welcome/09_welcome_l.jpg');
+}
+.page:nth-child(1) .photos .photo:nth-child(10) {
+    background-image: url('../images/welcome/10_welcome_l.jpg');
+}
+
+/************/
+/*          */
+/* arokaria */
+/*          */
+/************/
+.page:nth-child(2) .photos .photo:nth-child(1) {
+    background-image: url('../images/arokaria/01_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(2) {
+    background-image: url('../images/arokaria/02_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(3) {
+    background-image: url('../images/arokaria/03_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(4) {
+    background-image: url('../images/arokaria/04_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(5) {
+    background-image: url('../images/arokaria/05_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(6) {
+    background-image: url('../images/arokaria/06_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(7) {
+    background-image: url('../images/arokaria/07_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(8) {
+    background-image: url('../images/arokaria/08_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(9) {
+    background-image: url('../images/arokaria/09_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(10) {
+    background-image: url('../images/arokaria/10_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(11) {
+    background-image: url('../images/arokaria/11_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(12) {
+    background-image: url('../images/arokaria/12_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(13) {
+    background-image: url('../images/arokaria/13_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(14) {
+    background-image: url('../images/arokaria/14_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(15) {
+    background-image: url('../images/arokaria/15_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(16) {
+    background-image: url('../images/arokaria/16_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(17) {
+    background-image: url('../images/arokaria/17_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(18) {
+    background-image: url('../images/arokaria/18_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(19) {
+    background-image: url('../images/arokaria/19_arokaria_l.jpg');
+}
+.page:nth-child(2) .photos .photo:nth-child(20) {
+    background-image: url('../images/arokaria/20_arokaria_l.jpg');
+}
+
+/**************/
+/*            */
+/* activities */
+/*            */
+/**************/
+.page:nth-child(3) .photos .photo:nth-child(1) {
+    background-image: url('../images/activities/01_activities_l.jpg');
+}
+.page:nth-child(3) .photos .photo:nth-child(2) {
+    background-image: url('../images/activities/02_activities_l.jpg');
+}
+.page:nth-child(3) .photos .photo:nth-child(3) {
+    background-image: url('../images/activities/03_activities_l.jpg');
+}
+.page:nth-child(3) .photos .photo:nth-child(4) {
+    background-image: url('../images/activities/04_activities_l.jpg');
+}
+
+/**********/
+/*        */
+/* places */
+/*        */
+/**********/
+.page:nth-child(4) .photos .photo:nth-child(1) {
+    background-image: url('../images/places/01_places_l.jpg');
+}
+.page:nth-child(4) .photos .photo:nth-child(2) {
+    background-image: url('../images/places/02_places_l.jpg');
+}
+.page:nth-child(4) .photos .photo:nth-child(3) {
+    background-image: url('../images/places/03_places_l.jpg');
+}
+
+/************/
+/*          */
+/* weddings */
+/*          */
+/************/
+.page:nth-child(5) .photos .photo:nth-child(1) {
+    background-image: url('../images/weddings/01_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(2) {
+    background-image: url('../images/weddings/02_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(3) {
+    background-image: url('../images/weddings/03_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(4) {
+    background-image: url('../images/weddings/04_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(5) {
+    background-image: url('../images/weddings/05_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(6) {
+    background-image: url('../images/weddings/06_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(7) {
+    background-image: url('../images/weddings/07_weddings_l.jpg');
+}
+.page:nth-child(5) .photos .photo:nth-child(8) {
+    background-image: url('../images/weddings/08_weddings_l.jpg');
+}
+
+
+
+@media (orientation: portrait) {
+
+    /***********/
+    /*         */
+    /* welcome */
+    /*         */
+    /***********/
+    .page:nth-child(1) .photos .photo:nth-child(1) {
+        background-image: url('../images/welcome/01_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(2) {
+        background-image: url('../images/welcome/02_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(3) {
+        background-image: url('../images/welcome/03_welcome_p.jpg');
+        background-color: #B0D88D;
+    }
+    .page:nth-child(1) .photos .photo:nth-child(4) {
+        background-image: url('../images/welcome/04_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(5) {
+        background-image: url('../images/welcome/05_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(6) {
+        background-image: url('../images/welcome/06_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(7) {
+        background-image: url('../images/welcome/07_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(8) {
+        background-image: url('../images/welcome/08_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(9) {
+        background-image: url('../images/welcome/09_welcome_p.jpg');
+    }
+    .page:nth-child(1) .photos .photo:nth-child(10) {
+        background-image: url('../images/welcome/10_welcome_p.jpg');
+    }
+
+    /************/
+    /*          */
+    /* arokaria */
+    /*          */
+    /************/
+    .page:nth-child(2) .photos .photo:nth-child(1) {
+        background-image: url('../images/arokaria/01_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(2) {
+        background-image: url('../images/arokaria/02_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(3) {
+        background-image: url('../images/arokaria/03_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(4) {
+        background-image: url('../images/arokaria/04_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(5) {
+        background-image: url('../images/arokaria/05_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(6) {
+        background-image: url('../images/arokaria/06_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(7) {
+        background-image: url('../images/arokaria/07_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(8) {
+        background-image: url('../images/arokaria/08_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(9) {
+        background-image: url('../images/arokaria/09_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(10) {
+        background-image: url('../images/arokaria/10_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(11) {
+        background-image: url('../images/arokaria/11_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(12) {
+        background-image: url('../images/arokaria/12_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(13) {
+        background-image: url('../images/arokaria/13_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(14) {
+        background-image: url('../images/arokaria/14_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(15) {
+        background-image: url('../images/arokaria/15_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(16) {
+        background-image: url('../images/arokaria/16_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(17) {
+        background-image: url('../images/arokaria/17_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(18) {
+        background-image: url('../images/arokaria/18_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(19) {
+        background-image: url('../images/arokaria/19_arokaria_p.jpg');
+    }
+    .page:nth-child(2) .photos .photo:nth-child(20) {
+        background-image: url('../images/arokaria/20_arokaria_p.jpg');
+    }
+
+    /**************/
+    /*            */
+    /* activities */
+    /*            */
+    /**************/
+    .page:nth-child(3) .photos .photo:nth-child(1) {
+        background-image: url('../images/activities/01_activities_p.jpg');
+    }
+    .page:nth-child(3) .photos .photo:nth-child(2) {
+        background-image: url('../images/activities/02_activities_p.jpg');
+    }
+    .page:nth-child(3) .photos .photo:nth-child(3) {
+        background-image: url('../images/activities/03_activities_p.jpg');
+    }
+    .page:nth-child(3) .photos .photo:nth-child(4) {
+        background-image: url('../images/activities/04_activities_p.jpg');
+    }
+
+    /**********/
+    /*        */
+    /* places */
+    /*        */
+    /**********/
+    .page:nth-child(4) .photos .photo:nth-child(1) {
+        background-image: url('../images/places/01_places_p.jpg');
+    }
+    .page:nth-child(4) .photos .photo:nth-child(2) {
+        background-image: url('../images/places/02_places_p.jpg');
+    }
+    .page:nth-child(4) .photos .photo:nth-child(3) {
+        background-image: url('../images/places/03_places_p.jpg');
+    }
+
+    /************/
+    /*          */
+    /* weddings */
+    /*          */
+    /************/
+    .page:nth-child(5) .photos .photo:nth-child(1) {
+        background-image: url('../images/weddings/01_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(2) {
+        background-image: url('../images/weddings/02_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(3) {
+        background-image: url('../images/weddings/03_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(4) {
+        background-image: url('../images/weddings/04_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(5) {
+        background-image: url('../images/weddings/05_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(6) {
+        background-image: url('../images/weddings/06_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(7) {
+        background-image: url('../images/weddings/07_weddings_p.jpg');
+    }
+    .page:nth-child(5) .photos .photo:nth-child(8) {
+        background-image: url('../images/weddings/08_weddings_p.jpg');
+    }
+
+}
+
+
+
 #welcome {
+    /*
     background: url('../images/sunset_boat.jpg') no-repeat center center fixed; 
     background-size: cover;
+    */
 }
 
 #accommodation {
-    background: url('../images/boat.jpg') no-repeat center center fixed; 
-    background-size: cover;
 }
 
 #activities {
-    background: url('../images/beach.jpg') no-repeat center center fixed; 
-    background-size: cover;
 }
 
 #places {
-    background: url('../images/pink_sky.jpg') no-repeat center center fixed; 
-    background-size: cover;
 }
 
 #contact {
-    bottom: 1em;
+    bottom: 4em;
     font-size: 2em;
-    left: 1em;
+    right: 1em;
     position: fixed;
+    z-index: 100;
 }
 
 a {
@@ -73,4 +525,9 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+
+.hidden {
+    opacity: 0;
 }
