@@ -1,6 +1,6 @@
 # Mezonette Arokaria
 
-Four responsive website design alternatives, with English as the default language and a Greek language switch. The root index is the comparison page.
+The public homepage uses The Kyparissi House (design 4), with English as the default language and a Greek language switch. Earlier design alternatives remain available at their individual URLs.
 
 - `mediterranean-calm.html`
 - `summer-journal.html`
