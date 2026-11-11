@@ -10,3 +10,9 @@
 .section .balcony-photo{height:auto;max-height:720px;object-fit:contain;border-radius:16px}.terrace-section{padding-top:30px}@media(max-width:750px){.terrace-section .balcony-photo{grid-row:1}}
 
 .booking-footer{padding-bottom:20px}.booking-credit{display:flex;justify-content:flex-end;margin-top:48px;padding-inline:3%}.booking-credit a{font-family:monospace;font-size:12px;padding:10px}.booking-credit a:hover{text-decoration:underline}
+
+.btn{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+@media(hover:hover){.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgb(15 42 54 / 18%);filter:brightness(1.08)}}
+.btn:focus-visible{transform:translateY(-3px);box-shadow:0 8px 20px rgb(15 42 54 / 18%)}
+.btn:active{transform:translateY(0);box-shadow:0 2px 6px rgb(15 42 54 / 12%)}
+@media(prefers-reduced-motion:reduce){.btn:hover,.btn:focus-visible,.btn:active{transform:none}}
