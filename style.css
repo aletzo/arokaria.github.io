@@ -4,3 +4,5 @@
 .language-switch{display:flex;align-items:center;gap:4px;flex-shrink:0}.language-switch .lang{min-height:44px;padding:10px 9px;border-radius:5px;font-size:12px;white-space:nowrap;opacity:.65}.language-switch .lang[aria-pressed="true"]{opacity:1;font-weight:700;background:var(--ink);color:var(--paper)}.language-switch .lang:hover{opacity:1}
 
 .site-credit{text-align:center;padding:12px 20px 26px;font-size:12px}.site-credit a{display:inline-block;padding:8px;font-family:monospace}.site-credit a:hover{text-decoration:underline}
+
+.hosts .host-photo{width:100%;max-width:360px;height:auto;object-fit:contain;justify-self:center;border-radius:16px}
