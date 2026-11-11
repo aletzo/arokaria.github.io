@@ -71,3 +71,6 @@
 .fresh .navlinks{grid-template-columns:repeat(3,minmax(0,1fr))}
 .fresh .navlinks>.btn{display:block;grid-column:1/-1;text-align:center;padding:11px 18px;margin-top:4px;font-size:12px}
 }
+@media(max-width:900px){
+.fresh .gallery img{width:100%;height:auto;max-height:none;object-fit:cover;background:transparent}
+}
