@@ -5,4 +5,4 @@
 
 .site-credit{text-align:center;padding:12px 20px 26px;font-size:12px}.site-credit a{display:inline-block;padding:8px;font-family:monospace}.site-credit a:hover{text-decoration:underline}
 
-.hosts .host-photo{width:100%;max-width:360px;height:auto;object-fit:contain;justify-self:center;border-radius:16px}
+.section.hosts{max-width:960px;margin-inline:auto;padding:60px 7%;grid-template-columns:112px minmax(0,1fr);gap:32px;align-items:start}.hosts .host-photo{width:112px;height:112px;max-width:none;object-fit:cover;object-position:center 30%;border-radius:50%;justify-self:center}.hosts h2{font-size:28px;margin-bottom:16px}.hosts p{font-size:14px;max-width:none;margin-bottom:0}@media(max-width:600px){.section.hosts{grid-template-columns:1fr;gap:20px;padding-block:44px}.hosts .host-photo{width:88px;height:88px;justify-self:start}.hosts h2{font-size:25px}}
